@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- displays site properly based on user's device -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        >
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/m-queries.css">
+        <title>Frontend Mentor | Todo app</title>
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+        </style>
+    </head>
+    <body>
+        <div class="bg-container-dark">
+            <div class="image-container-dark">
+                <div class="heading">
+                    <h1>T O D O</h1>
+                    <button id="theme-change" class="sun"></button>
+                </div>
+                <input
+                    type="text"
+                    id="myInput"
+                    onchange="newElement()"
+                    class="input-dark"
+                    placeholder="Create a new todo..."
+                >
+            </div>
+            <div class="content-container">
+                <ul id="myUL">
+                    <!-- <li class="draggable" draggable="true">Hit the gym</li>
+                    <li class="draggable" draggable="true">Pay bills</li>
+                    <li class="draggable" draggable="true">Meet George</li>
+                    <li class="draggable" draggable="true">Buy eggs</li>
+                    <li class="draggable" draggable="true">Read a book</li>
+                    <li class="draggable" draggable="true">Organize office</li> -->
+                </ul>
+                <div class="result-container">
+                    <p>
+                        <span id="count">0</span> item(s) left
+                    </p>
+                    <div class="filter-desktop-container">
+                        <p id="all">All</p>
+                        <p id="active">Active</p>
+                        <p id="completed">Completed</p>
+                    </div>
+                    <p id="clear-all">Clear Completed</p>
+                </div>
+                <div class="filter-container">
+                    <p id="all1">All</p>
+                    <p id="active1">Active</p>
+                    <p id="completed1">Completed</p>
+                </div>
+                <p class="disclaimer-dark">Drag and drop to reorder list</p>
+            </div>
+        </div>
+        <div class="attribution" style="display: none">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor
+            </a
+      >. Coded by
+            <a href="#">Your Name Here</a>
+            .
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
