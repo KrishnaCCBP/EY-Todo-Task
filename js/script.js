@@ -132,7 +132,24 @@ function dragOver(e) {
 }
 
 function dragDrop(e) {
-  if (dragSrcEl != this) {
+  if (dragSrcEl.className.includes("checked") && this.className.includes("checked")) {
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData("text/html");
+    // this.className = e.dataTransfer.getData("class/html");
+  }
+  else if (!dragSrcEl.className.includes("checked") && this.className.includes("checked")) {
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData("text/html");
+    this.classList.remove("checked");
+    dragSrcEl.classList.add("checked");
+  }
+  else if (dragSrcEl.className.includes("checked") && !this.className.includes("checked")) {
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData("text/html");
+    this.classList.add("checked");
+    dragSrcEl.classList.remove("checked");
+  }
+  else {
     dragSrcEl.innerHTML = this.innerHTML;
     this.innerHTML = e.dataTransfer.getData("text/html");
   }
